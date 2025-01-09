@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Msgui</title>
+    <style>
+        ::-webkit-scrollbar{
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track{
+            background:rgb(151, 146, 146);
+        }
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: rgb(151, 146, 146);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: black;
+        }
+        #message{
+            width: 30rem;
+            height: 45rem;
+            background-color: rgba(223, 235, 245, 0.137);
+            font-family: Helvetica,Calibri,Arial;
+            display: grid;
+            border:1px solid;
+        }
+        #msg{
+            resize:none;
+            width: 23rem;
+            margin: 5px;
+            height: 2rem;
+            font-family: Calibri;
+            margin-right: 5px;
+            overflow-y:scroll;
+            font-size: 16px;
+            outline: none;
+            color:rgb(3, 2, 2);
+            border:none;
+            background-color:rgba(145, 143, 143, 0.411);
+            cursor:text;
+            border-radius: 5px;
+        }
+        #msg:hover{
+            background-color: rgba(185, 179, 179, 0.418);
+        }
+        #msg:focus{
+            background-color:rgba(145, 143, 143, 0.411) ;
+        }
+        ::selection{
+            color:black;
+            background-color: gray;
+        }
+        #send,#mic,#call,#vcall{
+            width: 3rem;
+            color:white;
+            background: none;
+            border:none;
+            cursor:pointer;
+            height: 3rem;
+            border-radius: 10px;
+        }
+        #send:hover,#mic:hover,#call:hover,#vcall:hover{
+            background-color: rgba(185, 179, 179, 0.418);
+        }
+        #send:focus,#mic:focus,#call:focus,#vcall:focus{
+            border:1px solid black;
+        }
+        #area_msg{
+            display: flex;
+            background-color: rgb(151, 146, 146);
+            height: 3rem;
+            align-self: end;
+            box-shadow: 0 0 1px 0.5px black;
+        }
+        ::placeholder{
+            color:rgb(67, 64, 64);
+        }
+        #top{
+            display: flex;
+            background-color: rgb(151, 146, 146);
+            height: 3rem;
+            box-shadow: 0 0 1px 0.5px black;
+
+        }
+        #uinfo{
+            width: 24rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="message">
+        <div id="top">
+            <div id="uinfo">
+
+            </div>
+            <button id="vcall"><i style="color:black; font-size: 15px;" class="fa-solid fa-video"></i></button>
+            <button id="call"><i style="color:black; font-size: 15px;" class="fa-solid fa-phone"></i></button>
+        </div>
+        <div id="area_msg">
+            <textarea id="msg" placeholder="Write a message..."></textarea>
+        <button id="send"><i style="font-size: 18px; color:black;" class="fa-solid fa-paper-plane"></i></button><button id="mic"><i style="font-size: 20px; color:black;" class="fa-solid fa-microphone"></i></button>
+        </div>
+    </div>
+</body>
+</html>

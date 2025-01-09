@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crema Signup</title>
+    <style>
+         #signup{
+            width: 30rem;
+            height: 30rem;
+            background-color: #f1ece896;
+            display: grid;
+            border-radius: 20px;
+            font-family: Helvetica;
+            border:1px solid rgb(228, 215, 215);
+            user-select:none;
+            align-content: center;
+            justify-items: center; 
+            justify-self: center;
+            margin-top: 20rem;
+            box-shadow: 0 0 8px 4px rgba(126, 69, 69, 0.349);
+        }
+        input{
+            width: 15rem;
+            height: 1.8rem;
+            outline: none;
+            border-radius: 5px;
+            margin-bottom: 1em;
+            border:1px solid rgb(221, 211, 211);
+            font-size: medium;
+            font-family: Calibri;
+        }
+        input:hover{
+            box-shadow: 0 0 5px 1px rgba(247, 74, 5, 0.349);
+        }
+        input:focus{
+            border:solid 1px rgb(249, 99, 54);
+        }
+        .sText{
+            text-shadow: 0 0 1px black, 0 0 1px rgb(238, 230, 230);
+        }
+    </style>
+    <form action="/signup">
+        <div id="signup">
+            <h1 class="sText">Sign Up</h1>
+            <hr style="width:10rem"><br>
+            <input type="text" name="name" id="" placeholder="Name Surname" required>
+            <input type="text" name="username" placeholder="username" required>
+            <input type="text" name="email" placeholder="e mail" required>
+            <input type="password" name="password" placeholder="password" required>
+            <input type="submit" value="Sign Up">
+        </div>
+    </form>
+</body>
+</html>

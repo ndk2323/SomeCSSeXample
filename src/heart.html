@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dot{
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 45%;
+            width: 250px;
+            height: 250px;
+            background-color: red;
+            
+        }
+        #dot2{
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 45%;
+            width: 250px;
+            height: 250px;
+            background-color:red;  
+        }
+        #btm{
+            border-style: solid;
+            border-width: 220.5px;
+            width: 0px;
+            margin-left: 29.50px;
+            height: 0px;
+            position: absolute;
+            top:222px;
+            z-index: 0;
+            border-color: red transparent transparent transparent;
+        }
+        #top{
+            display: flex;
+            position: absolute;
+            z-index: 1;
+        }
+    </style>
+</head>
+    <div id="heart">
+        <div id="top">
+            <div id="dot"></div>
+           <div id="dot2"></div>
+        </div>
+        <div id="btm"></div>
+    </div>
+</body>
+</html>

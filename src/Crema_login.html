@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crema Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #login{
+            width: 30rem;
+            height: 20rem;
+            background-color: #f1ece896;
+            display: grid;
+            border-radius: 20px;
+            font-family: Helvetica;
+            border:1px solid rgb(228, 215, 215);
+            user-select:none;
+            align-content: center;
+            justify-items: center; 
+            justify-self: center;
+            margin-top: 20rem;
+            box-shadow: 0 0 8px 4px rgba(126, 69, 69, 0.349);
+        }
+        input{
+            width: 15rem;
+            height: 1.8rem;
+            outline: none;
+            border-radius: 5px;
+            margin-bottom: 1em;
+            border:1px,solid,rgb(221, 211, 211);
+            font-size: medium;
+            font-family: Calibri;
+        }
+        input:hover{
+            box-shadow: 0 0 5px 1px rgba(247, 74, 5, 0.349);
+        }
+        input:focus{
+            border:solid 1px rgb(249, 99, 54);
+        }
+        .inputs{
+            position: static;
+        }
+        #loginButton{
+            width: 85px;
+            height: 35px;
+        }
+        #forgot{
+            text-decoration: none;
+            color:rgb(109, 111, 212);
+            font-size: 15px;
+            margin-left: 40px;
+            transition: 0.4s;
+        }
+        .loginText{
+            text-shadow: 0 0 1px black, 0 0 1px rgb(238, 230, 230);
+        }
+        
+        #forgot:hover{
+            color:rgb(255, 0, 0);
+        }
+        #buttons{
+            width: 15rem;
+            position: static;
+        }
+        #loginButton:focus{
+            box-shadow: 0 3px 6px rgba(255, 255, 255, 0.979), 0 6px 20px 0 rgba(255, 255, 255, 0.705);
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+    <div id="login">
+        <h1 class="loginText" style="cursor:default;">Login</h1><hr style="width:10rem"><br>
+        <span class="inputs">
+            <i class="fa-solid fa-user"></i>&nbsp;<input name="email" type="email" id="email" placeholder="e mail or username" required>
+        </span>
+    <span class="inputs" id="inputs">
+        <i class="fa-solid fa-eye" id="mov" onclick="visible()"></i><i id="mov2" style="display: none;" class="fa-solid fa-eye-slash" onclick="visible()"></i>&nbsp;<input name="pass" type="password" id="pass" placeholder="password" required>
+    </span><br>
+    <span id="buttons">
+        <input type="submit" value="Login" id="loginButton">
+        <a href="#" id="forgot">Reset Password</a>
+    </span>
+    </div>
+</form>
+    <script>
+        function visible(){
+            const mov = document.getElementById("mov");
+            const mov2 = document.getElementById("mov2");
+            const pass = document.getElementById("pass");
+            const login = document.getElementById("login");
+            if(pass.type === "password"){
+                pass.type = "text";
+                mov2.style.display = "";
+                mov.style.display = "none";
+            } else{
+                pass.type = "password";
+                mov2.style.display = "none";
+                mov.style.display = "";
+            }
+        }
+    </script>
+</body>
+</html>

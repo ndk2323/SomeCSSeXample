@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Bubble</title>
+    <style>
+        #inline{
+            width: 200px;
+            height: 60px;
+            background-color: black;
+            border-radius: 5px;
+            box-shadow: 0 0 5px black;
+            position: absolute;
+            z-index: 1;
+        }
+        #msg{
+            position: absolute;
+            background-color: black;
+            overflow: hidden;
+            width: 180px;
+            height: 50px;
+            resize: none;
+            border:none;
+            outline: none;
+            top: 5px;
+            left: 5px;
+            font-family: Arial;
+            font-size: 20px;
+            color:aliceblue;
+            z-index: 2;
+        }
+        #out{
+            border-style:solid;
+            border-width: 15px;
+            border-radius: 3px;
+            border-color: black transparent transparent transparent;
+            width:0px;
+            height: 0px;
+            position: absolute;
+            z-index: 0;
+            left: 0px;
+            left: 95px;
+        }
+
+        ::selection{
+            color:black;
+            background-color: aliceblue;
+        }
+        #bub{
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="bub">
+        <div id="out"></div>
+        <div id="inline">
+        <div id="msg">Message Bubble Example CSS</div>
+    </div>
+    </div>
+</body>
+</html>
