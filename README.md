@@ -6,3 +6,5 @@
 <a href="https://codepen.io/shoshajs/pen/XJrZqdK">Chess Board</a><br>
 <a href="https://codepen.io/shoshajs/pen/emOVrzJ">Heart</a><br>
 <a href="https://codepen.io/shoshajs/pen/emOVrdZ">Metal Login</a><br>
+<a href="https://codepen.io/shoshajs/pen/xbKYjRd">Message Bubble</a><br>
+<a href="">Message Gui</a><br>
