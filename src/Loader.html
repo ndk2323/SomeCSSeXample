@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+</head>
+<body>
+    <style>
+        body
+            {
+            background-color: black;
+            display: flex;
+            }
+        div
+            {
+            margin-right: 15px;
+            }
+
+        @keyframes spin{
+            from{transform:rotate(0deg);border:3px dotted rgb(103, 152, 251)}
+            to{transform:rotate(70deg); border:3px dotted rgb(0, 255, 136)}
+
+        }
+        @keyframes spin2{
+            from{transform:rotate(0deg);border-width: 0px 0px 0px 3px;
+            border-style: solid;
+            border-radius: 50%;
+            border-color: rgb(0, 255, 242);}
+            to{transform:rotate(180deg);border-width: 3px 0px 0px 0px;
+            border-style: solid;
+            border-radius: 50%;
+            border-color: rgb(0, 170, 255);}
+
+        }
+        #circle{
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            font-family: Helvetica;
+            text-align: center;
+            user-select: none;
+            animation: spin 0.15s infinite;
+            
+        }
+        #circle2{
+            width: 25px;
+            height: 25px;
+            font-family: Helvetica;
+            text-align: center;
+            user-select: none;
+            animation: spin2 0.15s infinite;
+        }
+    </style>
+    <div id="circle">
+    </div>
+    <div id="circle2"></div>
+</body>
+</html>
