@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+</head>
+<body>
+    <style>
+
+
+    @keyframes spin{
+    from{transform:rotate(0deg)}
+    to{transform:rotate(180deg)}
+    }
+
+
+    div{
+    width:100px;
+    height:100px;
+    background-color:red;
+    animation:spin 1s 0.50s infinite;
+    }
+
+
+    @keyframes spin2{
+    0%{transform:rotate(0deg)}
+    25%{transform:rotateX(90deg)}
+    50%{transform:rotateY(50deg)}
+    75%{transform:rotate(180deg)}
+    100%{transform:rotate(55deg)}
+    }
+
+
+    #div2{
+    width:100px;
+    height:100px;
+    background-color:red;
+    animation:spin2 1s 0.50s infinite;
+    }
+    </style>
+    <!--
+    
+    Keyframes usage: 
+
+    @keyframes name{
+    from{your code here begining}
+    }
+    to{your code here end}
+
+    for example; 
+
+    @keyframes spin{
+    from{transform:rotate(0deg)}
+    to{transform:rotate(180deg)}
+    }
+
+    div{
+    width:100px;
+    height:100px;
+    background-color:red;
+    animation:spin 1s 0.50s infinite;
+    }
+
+    if you want add one more step for your animation use this;
+
+
+    @keyframes name2{
+    0%{your code here begining}
+    50%{your code here extra}
+    100%{your code here end}
+    }
+
+    from{} equal to 0%{} and to{} equal 100%{} also 
+
+    for example;
+
+    @keyframes spin2{
+    0%{transform:rotate(0deg)}
+    25%{transform:rotateX(90deg)}
+    50%{transform:rotateY(50deg)}
+    75%{transform:rotate(180deg)}
+    100%{transform:rotate(55deg)}
+    }
+
+    div{
+    width:100px;
+    height:100px;
+    background-color:red;
+    animation:spin2 1s 0.50s infinite;
+    }
+
+    animation usage is =>
+    animation:animation-name animation-speed animation-delay animation-count;
+    
+    
+    -->
+    <div></div>
+    <div id="div2"></div>
+ </body>
+</html>
