@@ -15,6 +15,7 @@
             align-content: center;
             background-color: black;
             box-shadow: 0 0 5px 2px green;
+            user-select: none;
         }
         .square {
             width: 80px;
@@ -26,17 +27,43 @@
         .end {
             background-color: aliceblue;
         }
+        img{
+            cursor:pointer;
+            width:80px;
+            height:80px;
+        }
+        img:active{
+            width: 72px;
+            height: 72px;
+        }
     </style>
 </head>
 <body>
     <button id="boardCreate">Create</button>
     <div class="board" id="chessboard"></div>
     <script>
+        
+
         document.getElementById("boardCreate").addEventListener('click', function() {
             const board = document.getElementById("chessboard");
+
+            /* pieces images array*/
+            const boards = ["https://assets-themes.chess.com/image/ejgfv/150/br.png","https://assets-themes.chess.com/image/ejgfv/150/bn.png","https://assets-themes.chess.com/image/ejgfv/150/bb.png","https://assets-themes.chess.com/image/ejgfv/150/bk.png","https://assets-themes.chess.com/image/ejgfv/150/bq.png","https://assets-themes.chess.com/image/ejgfv/150/bb.png","https://assets-themes.chess.com/image/ejgfv/150/bn.png","https://assets-themes.chess.com/image/ejgfv/150/br.png","https://assets-themes.chess.com/image/ejgfv/150/bp.png","https://assets-themes.chess.com/image/ejgfv/150/bp.png","https://assets-themes.chess.com/image/ejgfv/150/bp.png","https://assets-themes.chess.com/image/ejgfv/150/bp.png","https://assets-themes.chess.com/image/ejgfv/150/bp.png","https://assets-themes.chess.com/image/ejgfv/150/bp.png","https://assets-themes.chess.com/image/ejgfv/150/bp.png","https://assets-themes.chess.com/image/ejgfv/150/bp.png","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","https://assets-themes.chess.com/image/ejgfv/150/wp.png","https://assets-themes.chess.com/image/ejgfv/150/wp.png","https://assets-themes.chess.com/image/ejgfv/150/wp.png","https://assets-themes.chess.com/image/ejgfv/150/wp.png","https://assets-themes.chess.com/image/ejgfv/150/wp.png","https://assets-themes.chess.com/image/ejgfv/150/wp.png","https://assets-themes.chess.com/image/ejgfv/150/wp.png","https://assets-themes.chess.com/image/ejgfv/150/wp.png","https://assets-themes.chess.com/image/ejgfv/150/wr.png","https://assets-themes.chess.com/image/ejgfv/150/wn.png","https://assets-themes.chess.com/image/ejgfv/150/wb.png","https://assets-themes.chess.com/image/ejgfv/150/wk.png","https://assets-themes.chess.com/image/ejgfv/150/wq.png","https://assets-themes.chess.com/image/ejgfv/150/wb.png","https://assets-themes.chess.com/image/ejgfv/150/wn.png","https://assets-themes.chess.com/image/ejgfv/150/wr.png"]
+            /*pieces images got from chess.com */
+
             if (board.children.length === 0) { 
                 for (var i = 0; i < 64; i++) {
+
                     const square = document.createElement("div");
+
+                    /* append images to squares */
+                    if(i <= 15){
+                        square.innerHTML = `<img src=${boards[i]}>`
+                    } else if(i > 15 && i <= 47){
+                        square.innerHTML = ""
+                    } else if(i > 47){
+                        square.innerHTML = `<img src=${boards[i]} >`
+                    }
                     square.classList.add("square");
                     const row = Math.floor(i / 8);
                     if (row % 2 === 0) {
@@ -45,6 +72,7 @@
                         square.classList.add(i % 2 === 0 ? "end" : "first");
                     }
                     board.appendChild(square);
+                    
                 }
             }
             board.style.display = (board.style.display === "none" || board.style.display === "") ? "grid" : "none";
@@ -52,4 +80,3 @@
     </script>
 </body>
 </html>
-
