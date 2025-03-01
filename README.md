@@ -9,3 +9,4 @@
 <a href="https://codepen.io/shoshajs/pen/xbKYjRd">Message Bubble</a><br>
 <a href="https://codepen.io/shoshajs/pen/GgKQdrX">Message Gui</a><br>
 <a href="https://codepen.io/shoshajs/pen/bNbXBBx">Loader</a><br>
+<a href="https://codepen.io/shoshajs/pen/VYwPEWe">Gradient Menu</a><br>
