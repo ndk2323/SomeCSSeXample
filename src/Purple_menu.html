@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+        #top{
+            font-family: Arial, Helvetica, sans-serif;
+            height: 53px;
+            background-color: #6f7bfc !important;
+            width: auto;
+            margin:-7.8px;
+        }
+        #menus{
+            width: 95px;
+            height: 45px;
+            margin-top:2.5px;
+            margin-left:2.5px;
+            border:2px solid #b7bdfd;
+            background-color:aliceblue;
+            font-size: 20px;
+            border-radius: 6px;
+            cursor:pointer;
+        }
+        #menus:hover{
+            background-color: rgb(241, 246, 252);
+
+        }
+        #menus:active{
+            background-color: #6f7afc;
+            box-shadow: 0 0 2px rgb(84, 84, 240);
+            color:whitesmoke;
+            text-shadow: 0 0 3px black;
+            transition: 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+    <div id="top">
+        <button  id="menus" onclick="menu_open()">Menu</button>
+    </div>
+</div>
+<script>
+    const menus = document.getElementById("menus");
+    window.onload = menu_open;
+    function menu_open() {
+        const top = document.getElementById("top");
+        if (top.style.height === "53px") {
+            top.style.height = "300px"
+            top.style.transition = "0.5s"
+        } else {
+            top.style.height = "53px"
+        }
+    }
+    
+</script>
+</body>
+</html>
